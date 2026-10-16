@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IBNU STORE | Top Up Free Fire</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0d0d12;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: #17171f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff9800;
+}
+
+.logo {
+    color: #ff9800;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* BANNER */
+.banner {
+    background: linear-gradient(135deg, #ff9800, #ff4500);
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 30px;
+}
+
+.banner p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: #1b1b25;
+    padding: 22px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.card h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+    color: #ff9800;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background: #292933;
+    color: white;
+    font-size: 16px;
+}
+
+.info {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* DIAMOND */
+.diamond-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.diamond {
+    background: #292933;
+    padding: 20px 10px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.diamond:hover {
+    transform: translateY(-3px);
+    border-color: #ff9800;
+}
+
+.diamond.active {
+    background: #493019;
+    border-color: #ff9800;
+}
+
+.diamond h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.diamond p {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* PAYMENT */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.payment {
+    background: #292933;
+    padding: 17px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.payment:hover {
+    border-color: orange;
+}
+
+.payment.active {
+    background: #493019;
+    border-color: orange;
+}
+
+/* TOTAL */
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.total span {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 17px;
+    background: linear-gradient(90deg, #ff9800, #ff4500);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+    background: #17171f;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+footer h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 400px) {
+    .banner h1 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">🔥 IBNU STORE</div>
+    <p>Top Up Game Cepat, Mudah & Praktis</p>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+    <h1>💎 TOP UP FREE FIRE 💎</h1>
+    <p>Selamat Datang di IBNU STORE</p>
+    <p>Pilih Diamond Favorit Kamu Sekarang!</p>
+</section>
+
+<div class="container">
+
+    <!-- ID PLAYER -->
+    <div class="card">
+        <h2>🎮 1. Masukkan ID Player</h2>
+
+        <input
+            type="text"
+            id="playerID"
+            placeholder="Masukkan ID Free Fire"
+            inputmode="numeric"
+            maxlength="15"
+        >
+
+        <p class="info">
+            Masukkan ID Free Fire kamu dengan benar.
+            Tidak perlu memasukkan password.
+        </p>
+    </div>
+
+    <!-- DIAMOND -->
+    <div class="card">
+        <h2>💎 2. Pilih Jumlah Diamond</h2>
+
+        <div class="diamond-grid">
+
+            <div class="diamond" onclick="pilihDiamond(this, 1000)">
+                <h3>💎 5 Diamond</h3>
+                <p>Rp 1.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 2000)">
+                <h3>💎 12 Diamond</h3>
+                <p>Rp 2.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 5000)">
+                <h3>💎 50 Diamond</h3>
+                <p>Rp 5.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 10000)">
+                <h3>💎 100 Diamond</h3>
+                <p>Rp 10.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 20000)">
+                <h3>💎 210 Diamond</h3>
+                <p>Rp 20.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 50000)">
+                <h3>💎 530 Diamond</h3>
+                <p>Rp 50.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 100000)">
+                <h3>💎 1080 Diamond</h3>
+                <p>Rp 100.000</p>
+            </div>
+
+            <div class="diamond" onclick="pilihDiamond(this, 200000)">
+                <h3>💎 2200 Diamond</h3>
+                <p>Rp 200.000</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="card">
+        <h2>💳 3. Pilih Metode Pembayaran</h2>
+
+        <div class="payment-grid">
+
+            <div class="payment" onclick="pilihPayment(this, 'DANA')">
+                💙 DANA
+            </div>
+
+            <div class="payment" onclick="pilihPayment(this, 'OVO')">
+                💜 OVO
+            </div>
+
+            <div class="payment" onclick="pilihPayment(this, 'GoPay')">
+                💚 GoPay
+            </div>
+
+            <div class="payment" onclick="pilihPayment(this, 'QRIS')">
+                📱 QRIS
+            </div>
+
+            <div class="payment" onclick="pilihPayment(this, 'ShopeePay')">
+                🧡 ShopeePay
+            </div>
+
+            <div class="payment" onclick="pilihPayment(this, 'Transfer Bank')">
+                🏦 Transfer Bank
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CHECKOUT -->
+    <div class="card">
+        <h2>🛒 4. Konfirmasi Pesanan</h2>
+
+        <div class="total">
+            <p>Total Pembayaran</p>
+            <span id="totalHarga">Rp 0</span>
+        </div>
+
+        <button onclick="beliSekarang()">
+            🔥 BELI SEKARANG
+        </button>
+
+        <p class="info">
+            Ini adalah website demo.
+            Belum tersedia pembayaran atau pengiriman Diamond otomatis.
+        </p>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>🔥 IBNU STORE</h3>
+    <p>Website Demo Top Up Free Fire</p>
+    <br>
+    <p>© 2026 IBNU STORE. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+let harga = 0;
+let diamondDipilih = "";
+let pembayaran = "";
+
+/* PILIH DIAMOND */
+function pilihDiamond(element, nominal) {
+
+    document.querySelectorAll(".diamond").forEach(item => {
+        item.classList.remove("active");
+    });
+
+    element.classList.add("active");
+
+    harga = nominal;
+
+    diamondDipilih = element.querySelector("h3").innerText;
+
+    document.getElementById("totalHarga").innerText =
+        "Rp " + harga.toLocaleString("id-ID");
+}
+
+/* PILIH PAYMENT */
+function pilihPayment(element, metode) {
+
+    document.querySelectorAll(".payment").forEach(item => {
+        item.classList.remove("active");
+    });
+
+    element.classList.add("active");
+
+    pembayaran = metode;
+}
+
+/* BELI SEKARANG */
+function beliSekarang() {
+
+    let id = document.getElementById("playerID").value.trim();
+
+    if (!/^[0-9]{5,15}$/.test(id)) {
+        alert("Masukkan ID Free Fire yang valid!");
+        return;
+    }
+
+    if (harga === 0) {
+        alert("Silakan pilih jumlah Diamond!");
+        return;
+    }
+
+    if (pembayaran === "") {
+        alert("Silakan pilih metode pembayaran!");
+        return;
+    }
+
+    let pesan =
+        "🔥 IBNU STORE 🔥\n\n" +
+        "Pesanan Demo Berhasil Dibuat!\n\n" +
+        "ID Player: " + id + "\n" +
+        "Diamond: " + diamondDipilih + "\n" +
+        "Pembayaran: " + pembayaran + "\n" +
+        "Total: Rp " + harga.toLocaleString("id-ID") +
+        "\n\nIni hanya simulasi. Belum ada transaksi sungguhan.";
+
+    alert(pesan);
+}
+
+</script>
+
+</body>
+</html>
